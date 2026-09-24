@@ -1,76 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Adelia";
+    src: url("fonts/adelia.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
 
-    background: #f5f1eb;
+    /* Tono cálido similar al papel de la invitación */
+    background-color: #f7f6f2;
 
-    font-family: Georgia, serif;
+    color: #111111;
 
-    color: #3d3935;
+    font-family: Georgia, "Times New Roman", serif;
 }
+
+
+/* ==============================
+   INVITACIÓN
+   ============================== */
+
+.invitacion {
+    width: 100%;
+    text-align: center;
+    margin: 25px auto 0;
+}
+
+.invitacion img {
+    display: block;
+    width: 80%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   FORMULARIO RSVP
+   ============================== */
 
 .rsvp {
-    max-width: 480px;
+    width: 100%;
+    max-width: 650px;
 
-    margin: auto;
+    margin: 0 auto;
 
-    background: #fffaf5;
+    padding: 35px 45px 60px;
 
-    padding: 30px;
+    background-color: #f7f6f2;
 
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-h1,
-h2,
-p {
     text-align: center;
 }
 
-form {
-    margin-top: 30px;
+
+/* BABY SHOWER */
+
+.rsvp h1 {
+    margin: 0 0 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: normal;
+
+    color: #111111;
 }
 
-label {
+
+/* ALEXANDER */
+
+.rsvp h2 {
+    margin: 5px 0 12px;
+
+    font-family: "Adelia", Georgia, serif;
+
+    font-size: 38px;
+    font-weight: normal;
+
+    letter-spacing: 6px;
+
+    color: #4d82cd;
+}
+
+
+/* CONFIRMA TU ASISTENCIA */
+
+.rsvp > p {
+    margin: 0 0 35px;
+
+    font-size: 17px;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #4d82cd;
+}
+
+
+/* ==============================
+   FORMULARIO
+   ============================== */
+
+form {
+    width: 100%;
+
+    text-align: left;
+}
+
+form label {
     display: block;
 
-    margin-top: 18px;
-    margin-bottom: 7px;
+    margin: 20px 0 8px;
 
-    font-family: Arial, sans-serif;
+    font-size: 16px;
     font-weight: bold;
+
+    color: #111111;
 }
+
+
+/* CAMPO NOMBRE */
 
 input,
 select {
     width: 100%;
 
-    padding: 13px;
+    padding: 14px 15px;
 
-    border: 1px solid #d8cec4;
+    border: 1px solid #b8b8b8;
+    border-radius: 4px;
 
-    border-radius: 10px;
+    background-color: #ffffff;
 
-    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    color: #111111;
+
+    outline: none;
 }
 
-button {
-    width: 100%;
+input:focus,
+select:focus {
+    border-color: #4d82cd;
 
-    padding: 14px;
+    box-shadow: 0 0 0 2px rgba(77, 130, 205, 0.12);
+}
+
+
+/* ==============================
+   BOTONES SÍ / NO
+   ============================== */
+
+.opciones-asistencia {
+    display: flex;
+
+    gap: 12px;
 
     margin-top: 10px;
+}
 
-    border: none;
+.opciones-asistencia button {
+    flex: 1;
 
-    border-radius: 10px;
+    padding: 14px 10px;
+
+    border: 1px solid #4d82cd;
+    border-radius: 4px;
+
+    background-color: transparent;
+
+    color: #4d82cd;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
 
     cursor: pointer;
 
-    font-weight: bold;
+    transition: 0.2s ease;
 }
+
+.opciones-asistencia button:hover {
+    background-color: #edf3fb;
+}
+
+
+/* BOTÓN SELECCIONADO */
+
+.opciones-asistencia button.seleccionado {
+    background-color: #4d82cd;
+
+    color: white;
+}
+
+
+/* ==============================
+   NÚMERO DE PERSONAS
+   ============================== */
+
 #grupoPersonas {
     display: none;
+}
+
+
+/* ==============================
+   CONFIRMAR ASISTENCIA
+   ============================== */
+
+#btnConfirmar {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #4d82cd;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#btnConfirmar:hover {
+    background-color: #3e70b5;
+}
+
+#btnConfirmar:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* ==============================
+   MENSAJE FINAL
+   ============================== */
+
+#mensaje {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #4d82cd;
+}
+
+
+/* ==============================
+   CELULARES
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .rsvp {
+        padding: 30px 22px 50px;
+    }
+
+    .rsvp h2 {
+        font-size: 30px;
+
+        letter-spacing: 4px;
+    }
+
+    .opciones-asistencia {
+        flex-direction: column;
+    }
+
 }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baby Shower Alexander</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="rsvp">
+
+        <h1>Baby Shower</h1>
+
+        <h2>Alexander</h2>
+
+        <p>
+            Confirma tu asistencia
+        </p>
+
+        <form id="rsvpForm">
+
+    <label for="nombre">
+        Nombre
+    </label>
+
+    <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Escribe tu nombre"
+        required
+    >
+
+    <label>
+        ¿Nos acompañas?
+    </label>
+
+    <div class="opciones-asistencia">
+
+        <button
+            type="button"
+            id="btnSi"
+        >
+            Sí, asistiré
+        </button>
+
+        <button
+            type="button"
+            id="btnNo"
+        >
+            No podré asistir
+        </button>
+
+    </div>
+
+    <div id="grupoPersonas">
+
+        <label for="personas">
+            Número de personas
+        </label>
+
+        <select id="personas" name="personas">
+
+            <option value="1">
+                1 persona
+            </option>
+
+            <option value="2">
+                2 personas
+            </option>
+
+        </select>
+
+    </div>
+
+    <button type="submit" id="btnConfirmar">
+        Confirmar asistencia
+    </button>
+
+    <p id="mensaje"></p>
+
+</form>
+
+        </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

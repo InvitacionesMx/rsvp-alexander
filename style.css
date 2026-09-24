@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 20px;
+
+    background: #f5f1eb;
+
+    font-family: Georgia, serif;
+
+    color: #3d3935;
+}
+
+.rsvp {
+    max-width: 480px;
+
+    margin: auto;
+
+    background: #fffaf5;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 7px;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d8cec4;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+#grupoPersonas {
+    display: none;
+}

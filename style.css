@@ -30,20 +30,39 @@ body {
    ============================== */
 
 .invitacion {
-    width: 100%;
-    text-align: center;
+    position: relative;
+
+    width: 80%;
+    max-width: 520px;
+
     margin: 25px auto 0;
 }
 
 .invitacion img {
     display: block;
-    width: 80%;
-    max-width: 520px;
+
+    width: 100%;
     height: auto;
-    margin: 0 auto;
+
+    margin: 0;
 }
 
 
+/* ZONA CLICABLE - MESA DE REGALOS */
+
+.enlace-regalos {
+    position: absolute;
+
+    left: 31%;
+    top: 72.8%;
+
+    width: 38%;
+    height: 7%;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
 /* ==============================
    FORMULARIO RSVP
    ============================== */
@@ -274,7 +293,9 @@ select:focus {
    ============================== */
 
 @media (max-width: 600px) {
-
+    .invitacion {
+    width: 92%;
+    }
     .rsvp {
         padding: 30px 22px 50px;
     }
